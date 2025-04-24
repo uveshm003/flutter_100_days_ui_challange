@@ -7,9 +7,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(home: Container());
   }
+}
+
+List<NavigationListItem> pageList = [];
+
+class NavigationListItem {
+  final String name;
+  final Widget page;
+
+  NavigationListItem({required this.name, required this.page});
 }
