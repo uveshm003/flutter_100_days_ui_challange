@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_100_days_ui_challange/day_1/yacht_rental_app.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,11 +10,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Container());
+    return MaterialApp(home: YachtRentalApp());
   }
 }
 
-List<NavigationListItem> pageList = [];
+List<NavigationListItem> pageList = [
+  NavigationListItem(name: 'Yacht Rental App', page: YachtRentalApp()),
+];
 
 class NavigationListItem {
   final String name;
