@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class YachtRentalApp extends StatefulWidget {
   const YachtRentalApp({super.key});
@@ -20,7 +21,7 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
             right: 20,
             left: 20,
             child: Container(
-              height: 300,
+              height: 310,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(45),
                 border: Border.all(color: Colors.blueGrey,width: 2),
@@ -40,14 +41,37 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                 padding: const EdgeInsets.all(24.0),
                 child: Column(
                   children: [
-                    SizedBox(height: 20),
+                    SizedBox(height: 10),
                     Text(
                       'Welcome to Rental Yacht',
-                      style: TextStyle(color: Colors.white,fontSize: 36,fontWeight: FontWeight.w600),
+                      style: TextStyle(color: Colors.white,fontSize: 36,fontWeight: FontWeight.w500,fontFamily: GoogleFonts.poppins().fontFamily),
                     ),
                     Text(
                       'Explore Top Deals & Sail into Unforgettable moments',
-                      style: TextStyle(color: Colors.white,fontSize: 24,fontWeight: FontWeight.w600),
+                      style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400,fontFamily: GoogleFonts.poppins().fontFamily),
+                    ),
+
+                    SizedBox(height: 20),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('Skip',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontFamily: GoogleFonts.poppins().fontFamily),),
+                        Row(
+                          children: List.generate(
+                            3,
+                                (index) => Container(
+                              width: 20,
+                              decoration: BoxDecoration(
+                                color: Colors.white70,
+                                shape:
+                                index == 1
+                                    ? BoxShape.rectangle
+                                    : BoxShape.circle,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
