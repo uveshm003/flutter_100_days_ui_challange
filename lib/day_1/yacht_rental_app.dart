@@ -95,16 +95,19 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                             ),
                           ),
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(12.0),
-                            child: Icon(
-                              Icons.arrow_right_alt_outlined,
-                              color: Colors.blue,
+                        GestureDetector(
+                          onTap: onNextPressed,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              shape: BoxShape.circle,
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Icon(
+                                Icons.arrow_right_alt_outlined,
+                                color: Colors.blue,
+                              ),
                             ),
                           ),
                         ),
