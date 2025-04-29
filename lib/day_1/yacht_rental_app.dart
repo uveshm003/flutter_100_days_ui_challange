@@ -9,6 +9,13 @@ class YachtRentalApp extends StatefulWidget {
 }
 
 class _YachtRentalAppState extends State<YachtRentalApp> {
+  int currentPage = 0;
+
+  void onNextPressed() {
+    currentPage++;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +31,7 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
               height: 310,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(45),
-                border: Border.all(color: Colors.blueGrey,width: 2),
+                border: Border.all(color: Colors.blueGrey, width: 2),
                 gradient: LinearGradient(
                   colors: [
                     Color(0xFF0F2B38),
@@ -44,29 +51,46 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                     SizedBox(height: 10),
                     Text(
                       'Welcome to Rental Yacht',
-                      style: TextStyle(color: Colors.white,fontSize: 36,fontWeight: FontWeight.w500,fontFamily: GoogleFonts.poppins().fontFamily),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 36,
+                        fontWeight: FontWeight.w500,
+                        fontFamily: GoogleFonts.poppins().fontFamily,
+                      ),
                     ),
                     Text(
                       'Explore Top Deals & Sail into Unforgettable moments',
-                      style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400,fontFamily: GoogleFonts.poppins().fontFamily),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: GoogleFonts.poppins().fontFamily,
+                      ),
                     ),
 
                     SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Skip',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400,fontFamily: GoogleFonts.poppins().fontFamily),),
+                        Text(
+                          'Skip',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          ),
+                        ),
                         Row(
                           children: List.generate(
                             3,
-                                (index) => Container(
+                            (index) => Container(
                               width: 20,
                               decoration: BoxDecoration(
                                 color: Colors.white70,
                                 shape:
-                                index == 1
-                                    ? BoxShape.rectangle
-                                    : BoxShape.circle,
+                                    index == 1
+                                        ? BoxShape.rectangle
+                                        : BoxShape.circle,
                               ),
                             ),
                           ),
