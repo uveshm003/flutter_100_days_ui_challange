@@ -72,12 +72,18 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          'Skip',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: GoogleFonts.poppins().fontFamily,
+                        GestureDetector(
+                          onTap: () {
+                            currentPage = 2;
+                            setState(() {});
+                          },
+                          child: Text(
+                            'Skip',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w400,
+                              fontFamily: GoogleFonts.poppins().fontFamily,
+                            ),
                           ),
                         ),
                         Row(
