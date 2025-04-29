@@ -95,7 +95,19 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                             ),
                           ),
                         ),
-                        Container(child: Icon(Icons.arrow_right_alt_outlined)),
+                        Container(
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(12.0),
+                            child: Icon(
+                              Icons.arrow_right_alt_outlined,
+                              color: Colors.blue,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
