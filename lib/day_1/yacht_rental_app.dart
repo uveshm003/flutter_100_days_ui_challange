@@ -95,6 +95,7 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                             ),
                           ),
                         ),
+                        Container(child: Icon(Icons.arrow_right_alt_outlined)),
                       ],
                     ),
                   ],
