@@ -16,6 +16,11 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
     setState(() {});
   }
 
+  void onSkipPressed() {
+    currentPage = 2;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
