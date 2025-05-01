@@ -78,10 +78,7 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         GestureDetector(
-                          onTap: () {
-                            currentPage = 2;
-                            setState(() {});
-                          },
+                          onTap: onSkipPressed,
                           child: Text(
                             'Skip',
                             style: TextStyle(
