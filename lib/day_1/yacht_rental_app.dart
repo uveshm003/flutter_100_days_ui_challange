@@ -72,7 +72,6 @@ class _YachtRentalAppState extends State<YachtRentalApp> {
                         fontFamily: GoogleFonts.poppins().fontFamily,
                       ),
                     ),
-
                     SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
